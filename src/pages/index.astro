@@ -1,81 +1,137 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon'
 ---
 
 <Layout title="Welcome to Astro.">
+	<header class="bg-[#000000] w-full py-7 px-4 md:py-4 md:px-24 flex justify-between">
+		<div class="flex text-2xl text-white md:gap-x-4 gap-x-2">
+			<a class="font-medium flex md:pt-2 pt-1">
+				<div class="flex gap-x-2">
+					<div class="bg-white w-8 h-8 rounded-lg p-[0.40rem]">
+						<div class=" border-t-4 border-r-4 border-black pt-1">
+							<div class="border-4 border-black rounded-full w-3 h-3"></div>
+						</div>
+					</div>
+					<h3>Abstract</h3>
+				</div>
+			</a>
+			<div class="md:px-4 px-2 border-l-2 border-white md:pt-2 pt-1">
+				<h3>Help Center</h3>
+			</div>
+		</div>
+		<div class="md:flex text-white justify-end gap-x-4 hidden">
+			<button class="px-6 py-2 border-[1px] border-white rounded-lg text-2xl bg-white bg-opacity-10">Submit a request</button>
+			<button class="px-6 py-2 rounded-lg text-2xl bg-[#4C5FD5] hover:bg-white hover:text-black transition-colors">Sign in</button>
+		</div>
+		<div class="md:hidden flex">
+			<Icon name="mdi:magnify" class="text-white h-full w-8" />
+			<Icon name="mdi:menu" class="text-white h-full w-8" />
+		</div>
+	</header>
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<section class="w-full bg-[#dadbf1] py-28 justify-center flex flex-col items-center px-8 md:px-80 gap-y-20">
+			<h1 class=" md:text-[5rem] text-4xl font-medium md:font-normal tracking-tighter">How can we help?</h1>
+			<div class="w-full flex justify-between hover:text-blue-500">
+				<input class="w-full text-base font-medium px-4 py-5 border-[1px] border-black hover:border-blue-500 transition-colors rounded-lg" placeholder="Search" />
+				<Icon name="ep:right" class=" w-6 h-6 -ml-96 mt-[1.4rem] mr-4" />
+			</div>
+		</section>
+		<section class="w-full bg-white mt-44 px-36 pb-4">
+			<div class="w-full grid grid-cols-2">
+				<div class="col-span-1">
+					<div class="flex w-full">
+						<div class=" w-2/5 pr-6">
+							<img src="https://theme.zdassets.com/theme_assets/2197739/aed6500f4da41c641f3de5d96247eb6654e9c386.png" />
+						</div>
+						<div class="flex flex-col gap-y-3 pl-2 pr-10">
+							<h1 class="font-bold text-2xl">Using Abstract</h1>
+							<div class="flex flex-col gap-y-3">
+								<p class="text-2xl">Abstract lets you manage, version, and document your designs in one place.</p>
+								<a href="#" class="flex text-[20px] text-[#4C5FD5] font-medium  hover:underline">Learn More →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-span-1">
+					<div class="flex w-full">
+						<div class=" w-2/5 pr-6">
+							<img src="https://theme.zdassets.com/theme_assets/2197739/91588b3d042df901d9b941ccbb57af4f151401c7.png" />
+						</div>
+						<div class="flex flex-col gap-y-3 pl-2 pr-4">
+							<h1 class="font-bold text-2xl">Manage your account</h1>
+							<div class="flex flex-col gap-y-3">
+								<p class="text-2xl">Configure your account settings, such as your email, profile details, and password.</p>
+								<a href="#" class="flex text-[20px] text-[#4C5FD5] font-medium  hover:underline">Learn More →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w-full grid grid-cols-2 mt-20">
+				<div class="col-span-1">
+					<div class="flex w-full">
+						<div class=" w-2/5 pr-4">
+							<img src="https://theme.zdassets.com/theme_assets/2197739/50d0db451c0e1e66e1caddd142986fcf6792ca05.png" />
+						</div>
+						<div class="flex flex-col gap-y-3 pl-2 pr-10">
+							<h1 class="font-bold text-2xl">Manage organizations, teams, and projects</h1>
+							<div class="flex flex-col gap-y-3">
+								<p class="text-2xl">Use Abstract organizations, teams, and projects to organize your people and your work.</p>
+								<a href="#" class="flex text-[20px] text-[#4C5FD5] font-medium  hover:underline">Learn More →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-span-1">
+					<div class="flex w-full">
+						<div class=" w-2/5 pr-6">
+							<img src="https://theme.zdassets.com/theme_assets/2197739/3e82d0126e97d7b7c60a611d4e11b3c278d33743.png" />
+						</div>
+						<div class="flex flex-col gap-y-3 pl-2 pr-4">
+							<h1 class="font-bold text-2xl">Manage billing</h1>
+							<div class="flex flex-col gap-y-3">
+								<p class="text-2xl">Change subscriptions and payment details. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+								<a href="#" class="flex text-[20px] text-[#4C5FD5] font-medium  hover:underline">Learn More →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w-full grid grid-cols-2 mt-20">
+				<div class="col-span-1">
+					<div class="flex w-full">
+						<div class=" w-2/5 pr-4">
+							<img src="https://theme.zdassets.com/theme_assets/2197739/7712592465ef5c7bf18f1c7cb16e19ab44eb81e3.png" />
+						</div>
+						<div class="flex flex-col gap-y-3 pl-2 pr-10">
+							<h1 class="font-bold text-2xl">Authenticate to Abstract</h1>
+							<div class="flex flex-col gap-y-3">
+								<p class="text-2xl">Set up and configure SSO, SCIM, and Just-in-Time provisioning. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+								<a href="#" class="flex text-[20px] text-[#4C5FD5] font-medium  hover:underline">Learn More →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-span-1">
+					<div class="flex w-full">
+						<div class=" w-2/5 pr-6">
+							<img src="https://theme.zdassets.com/theme_assets/2197739/dcc25d18e224d12621d74e545cc8bdd1b5685ca8.png" />
+						</div>
+						<div class="flex flex-col gap-y-3 pl-2 pr-4">
+							<h1 class="font-bold text-2xl">Abstract support</h1>
+							<div class="flex flex-col gap-y-3">
+								<p class="text-2xl">Get in touch with a human. &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+								<a href="#" class="flex text-[20px] text-[#4C5FD5] font-medium  hover:underline">Learn More →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	
 </style>
